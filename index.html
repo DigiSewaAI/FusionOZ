@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Fusion OZ Nepal - Australian Migration & Education Experts</title>
+    <meta name="description" content="Expert Australian migration & education consultants. Visa assistance, study programs, and investment opportunities.">
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="Fusion OZ - Australian Migration Experts">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:description" content="Get expert help on Australian migration, student visas, and investment options.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fusionoz.com">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary: #1a3a6c;
+            --secondary: #e63946;
+            --accent: #fca311;
+            --light: #f1faee;
+            --dark: #1d3557;
+            --gold: #ffd700;
+            --sky-blue: #87ceeb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 65px;
+            transition: transform 0.3s;
+            object-fit: contain;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+        
+        /* Hero Section with Slideshow */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 58, 108, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 180px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
+        
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.6rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero .cta-button {
+            font-size: 1.3rem;
+            padding: 18px 50px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .slide-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+        
+        .indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .indicator.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary);
+            position: relative;
+            font-size: 2.8rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            color: var(--dark);
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(252,163,17,0.2) 0%, rgba(252,163,17,0) 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            margin: 30px 0;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+        }
+        
+        .services .section-title {
+            color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.4s;
+            text-align: center;
+            padding: 40px 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .service-icon {
+            background: var(--accent);
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.5rem;
+            box-shadow: 0 8px 20px rgba(252, 163, 17, 0.3);
+        }
+        
+        .service-card h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .service-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .team-member.full-row {
+            grid-column: 1 / span 2;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 5px solid rgba(26, 58, 108, 0.1);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-member h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .team-member .position {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Detailed Form Section */
+        .detailed-form {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        
+        .form-header {
+            background: var(--accent);
+            padding: 25px 40px;
+            text-align: center;
+        }
+        
+        .form-header h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+        
+        .form-body {
+            padding: 40px;
+            color: #333;
+        }
+        
+        .form-section {
+            margin-bottom: 40px;
+        }
+        
+        .form-section h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .form-group {
+            flex: 1 0 300px;
+            padding: 0 15px;
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 58, 108, 0.1);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, #e69500 100%);
+            color: white;
+            border: none;
+            padding: 16px 50px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(252, 163, 17, 0.3);
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #e69500 0%, var(--accent) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(252, 163, 17, 0.4);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-icon {
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: var(--gold);
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s;
+            font-size: 1.3rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* Form Styles */
+        .consultation-form {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+        
+        .consultation-form h3 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .consultation-form p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 58, 108, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Form Message */
+        .form-message {
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            font-size: 1.1rem;
+        }
+        
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0c1e3e 0%, #142a50 100%);
+            color: white;
+            padding: 70px 0 30px;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #ddd;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column ul li i {
+            color: var(--gold);
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 1rem;
+            color: #aaa;
+        }
+        
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 200px;
+            background: #ddd;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* New styles for spouse fields */
+        #spouseFields {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        #spouseFields.visible {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .spouse-section-title {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Privacy Policy Checkbox */
+        .privacy-checkbox {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h2 {
+                font-size: 3.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px 15px;
+            }
+            
+            .hero {
+                padding: 80px 0;
+                min-height: 600px;
+            }
+            
+            .hero-content {
+                padding-top: 120px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-member.full-row {
+                grid-column: 1;
+            }
+            
+            .form-body {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+            
+            .form-group {
+                flex: 1 0 100%;
+            padding: 0 10px;
+            margin-bottom: 15px;
+            }
+            
+            .form-header {
+                padding: 20px;
+            }
+            
+            .form-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Fusion OZ Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#consultation">Consultation</a></li>
+                </ul>
+            </nav>
+            <a href="#consultation" class="cta-button">Book Consultation</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="hero">
+        <div class="slideshow">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1546268060-2592ff93ee24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"></div>
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h2>MAKE AUSTRALIA YOUR PERMANENT HOME</h2>
+            <p>Expert guidance for education, investment and immigration to Australia</p>
+            <a href="#consultation" class="cta-button">BOOK FREE CONSULTATION</a>
+        </div>
+        
+        <div class="slide-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Fusion OZ</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Partner for Australian Migration & Education</h3>
+                    <p>Fusion OZ was established in 2009 with the vision to develop education and immigration services that help individuals who dream to migrate to Australia to enhance themselves to become their best version.</p>
+                    
+                    <div class="highlight">
+                        <p>We are one of the leading Education and Migration Agencies in Sydney, Australia with branch offices in Melbourne CBD, Malaysia, China, and Nepal. We are committed to providing customized and professional support to our clients throughout their whole education or migration journey in Australia.</p>
+                    </div>
+                    
+                    <p>Our team consists of MARA Agent Yan Zhang with over 18 years of experience, and a dedicated group of consultants with a wide range of expertise. We strive to deliver premier services to our clients to change their definition of the Australian experience.</p>
+                    <p>At Fusion OZ Nepal, we understand the challenges of moving to a new country. Our personalized approach ensures that each client receives tailored solutions for their unique situation.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Fusion OZ Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education Consulting</h3>
+                    <p>We help international students find the right course for their future career goals. We manage all aspects of the application procedure and are with you every step of the way from course selection to visa approval.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Migration Services</h3>
+                    <p>Expert guidance on all visa categories including skilled migration, family visas, and permanent residency. Our MARA-registered agents ensure professional advice and high success rates for your visa applications.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investment Consulting</h3>
+                    <p>Strategic advice for business and investment opportunities in Australia. We guide you through the complex process of investment migration and help you establish successful ventures in Australia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Our Kathmandu Team</h2>
+            <div class="team-grid">
+                <div class="team-member full-row">
+                    <div class="member-photo">
+                        <img src="images/rajat.jpg" alt="Rajat Pradhan">
+                    </div>
+                    <h3>Rajat Pradhan</h3>
+                    <p class="position">Operations Manager</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/sabin.jpg" alt="Sabin Dahal">
+                    </div>
+                    <h3>Sabin Dahal</h3>
+                    <p class="position">Senior Counsellor</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/sanjita.jpg" alt="Sanjita Koirala">
+                    </div>
+                    <h3>Sanjita Koirala</h3>
+                    <p class="position">Counsellor</p>
+                </div>
+                
+                <div class="team-member full-row">
+                    <div class="member-photo">
+                        <img src="images/bhumika.jpg" alt="Bhumika Timalsina">
+                    </div>
+                    <h3>Bhumika Timalsina</h3>
+                    <p class="position">Front Desk/Admin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Form Section -->
+    <section id="detailed-form" class="detailed-form">
+        <div class="container">
+            <h2 class="section-title">Client Information Form</h2>
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Fusion OZ Pvt Ltd</h2>
+                    <p>Migration & Education Experts</p>
+                </div>
+                <form id="clientForm" action="https://formsubmit.co/info.np@fusionoz.com" method="POST" class="form-body">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://fusionoz.com/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Client Form Submission - Fusion OZ">
+                    <!-- Honeypot Spam Protection -->
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="First Name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name (Family) *</label>
+                                <input type="text" id="lastName" name="Last Name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" name="Date of Birth" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile *</label>
+                                <input type="tel" id="mobile" name="Mobile" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email ID *</label>
+                                <input type="email" id="email" name="Email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="maritalStatus">Are you Married? *</label>
+                                <select id="maritalStatus" name="Marital Status" class="form-control" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Spouse fields container -->
+                        <div id="spouseFields">
+                            <h4 class="spouse-section-title">Spouse Information</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="spouseDegree">Spouse's completed degree</label>
+                                    <input type="text" id="spouseDegree" name="Spouse Degree" class="form-control" placeholder="Degree name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="spouseInstitution">Name of Institution</label>
+                                    <input type="text" id="spouseInstitution" name="Spouse Institution" class="form-control" placeholder="Institution name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="spouseInstitutionCountry">Country of Institution</label>
+                                    <input type="text" id="spouseInstitutionCountry" name="Spouse Institution Country" class="form-control" placeholder="Country">
+                                </div>
+                                <div class="form-group">
+                                    <label for="spouseExperience">Spouse's work experience</label>
+                                    <textarea id="spouseExperience" name="Spouse Work Experience" class="form-control" placeholder="Position, company, location, duration" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address (Current) *</label>
+                            <textarea id="address" name="Address" class="form-control" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Where did you hear about us? *</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sourceStaff" name="Referral Source" value="Staff Referral">
+                                <label for="sourceStaff">Staff (Referral)</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sourceFriends" name="Referral Source" value="Friends Referral">
+                                <label for="sourceFriends">Friends (Referral)</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sourceWebsite" name="Referral Source" value="Website">
+                                <label for="sourceWebsite">Website</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sourceEvents" name="Referral Source" value="Events/Seminars">
+                                <label for="sourceEvents">Events (Seminars)</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sourceSocial" name="Referral Source" value="Social Media">
+                                <label for="sourceSocial">Social Media</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Education</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="degreeName">Last completed Degree Name *</label>
+                                <input type="text" id="degreeName" name="Degree Name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionName">Name of Institution *</label>
+                                <input type="text" id="institutionName" name="Institution Name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="institutionCountry">Country of Institution *</label>
+                                <input type="text" id="institutionCountry" name="Institution Country" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="completionDate">Completion Date *</label>
+                                <input type="date" id="completionDate" name="Completion Date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Work Experience</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="position1">Position</label>
+                                <input type="text" id="position1" name="Position 1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="company1">Company Name & Country</label>
+                                <input type="text" id="company1" name="Company 1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="duration1">Duration (in months)</label>
+                                <input type="number" id="duration1" name="Duration 1" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="position2">Position</label>
+                                <input type="text" id="position2" name="Position 2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="company2">Company Name & Country</label>
+                                <input type="text" id="company2" name="Company 2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="duration2">Duration (in months)</label>
+                                <input type="number" id="duration2" name="Duration 2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="position3">Position</label>
+                                <input type="text" id="position3" name="Position 3" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="company3">Company Name & Country</label>
+                                <input type="text" id="company3" name="Company 3" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="duration3">Duration (in months)</label>
+                                <input type="number" id="duration3" name="Duration 3" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Language Proficiency</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Did you appear for IELTS/ PTE Academic/ Cambridge (CAE)/TOEFL IBT? *</label>
+                                <select id="englishTest" name="English Test Taken" class="form-control" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="testResults" style="display:none;">
+                            <h4>Test Results</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ieltsOverall">IELTS Overall</label>
+                                    <input type="number" step="0.5" min="0" max="9" id="ieltsOverall" name="IELTS Overall" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ieltsReading">Reading</label>
+                                    <input type="number" step="0.5" min="0" max="9" id="ieltsReading" name="IELTS Reading" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ieltsWriting">Writing</label>
+                                    <input type="number" step="0.5" min="0" max="9" id="ieltsWriting" name="IELTS Writing" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ieltsSpeaking">Speaking</label>
+                                    <input type="number" step="0.5" min="0" max="9" id="ieltsSpeaking" name="IELTS Speaking" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ieltsListening">Listening</label>
+                                    <input type="number" step="0.5" min="0" max="9" id="ieltsListening" name="IELTS Listening" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="acknowledge" name="Acknowledgement" required>
+                                <label for="acknowledge">I hereby acknowledge that Fusion OZ Pvt Ltd will keep my information securely according to relevant regulations and may send me marketing emails from time to time to keep me updated for upcoming events or market news.</label>
+                            </div>
+                        </div>
+                        
+                        <!-- Privacy Policy Checkbox -->
+                        <div class="privacy-checkbox">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="privacyPolicy" name="Privacy Policy" required>
+                                <label for="privacyPolicy">I agree to the <a href="/privacy-policy.html" target="_blank">privacy policy</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <button type="submit" class="submit-btn">Submit Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Visit Our Office</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>Level 4, Samar Building (opp. Shantinagar gate), New Baneshwor Rd, Kathmandu 44600</p>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <p>+977-1-4106617</p>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p>info.np@fusionoz.com</p>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <p>Open Hours: Sunday-Friday, 10:00 AM - 6:00 PM</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/fusionoznepal" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Consultation Form -->
+                <div id="consultation" class="consultation-form">
+                    <h3>Book Your Free Consultation</h3>
+                    <p>Fill out the form and our expert will contact you within 24 hours</p>
+                    
+                    <div id="form-message" class="form-message"></div>
+                    
+                    <form id="consultationForm" action="https://formsubmit.co/info.np@fusionoz.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://fusionoz.com/thank-you.html">
+                        <input type="hidden" name="_subject" value="New Consultation Request - Fusion OZ">
+                        <!-- Honeypot Spam Protection -->
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="Full Name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="Email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="Phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service of Interest *</label>
+                            <select id="service" name="Service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="Education Consulting">Education Consulting</option>
+                                <option value="Migration Services">Migration Services</option>
+                                <option value="Investment Consulting">Investment Consulting</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="Message" class="form-control" placeholder="Tell us about your goals and questions..."></textarea>
+                        </div>
+                        
+                        <!-- Privacy Policy Checkbox -->
+                        <div class="privacy-checkbox">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="privacyPolicyConsult" name="Privacy Policy" required>
+                                <label for="privacyPolicyConsult">I agree to the <a href="/privacy-policy.html" target="_blank">privacy policy</a></label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Fusion OZ Nepal</h4>
+                    <p>We help individuals achieve their dreams of migrating to Australia through expert education and migration consulting services.</p>
+                    <p>Part of Fusion OZ Pvt Ltd. - Head Office in Sydney, Australia with 14+ years of experience in migration services.</p>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.348147381575!2d85.336286315062!3d27.70439298279264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a536c0e5fd%3A0xab106b5b1f42e59a!2sSamar%20Building%2C%20New%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1688533436787!5m2!1sen!2snp" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i><a href="#about">About Us</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#services">Our Services</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#team">Our Team</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#contact">Contact Us</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#consultation">Free Consultation</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#detailed-form">Client Form</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Level 4, Samar Building, New Baneshwor</li>
+                        <li><i class="fas fa-phone"></i> +977-1-4106617</li>
+                        <li><i class="fas fa-envelope"></i> info.np@fusionoz.com</li>
+                        <li><i class="fas fa-clock"></i> Sun-Fri: 10:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Fusion OZ Pvt. Ltd. All Rights Reserved. | Migration | Education</p>
+                <p>www.fusionoz.com | Regulated by MARA Australia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Slideshow functionality
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            let next = currentSlide + 1;
+            if (next >= slides.length) next = 0;
+            showSlide(next);
+        }
+        
+        // Set up slide indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
+        
+        // Toggle test results visibility
+        const englishTest = document.getElementById('englishTest');
+        const testResults = document.getElementById('testResults');
+        
+        englishTest.addEventListener('change', function() {
+            if (this.value === 'yes') {
+                testResults.style.display = 'block';
+            } else {
+                testResults.style.display = 'none';
+            }
+        });
+        
+        // Toggle spouse fields visibility
+        const maritalStatus = document.getElementById('maritalStatus');
+        const spouseFields = document.getElementById('spouseFields');
+        
+        maritalStatus.addEventListener('change', function() {
+            if (this.value === 'yes') {
+                spouseFields.style.display = 'block';
+            } else {
+                spouseFields.style.display = 'none';
+            }
+        });
+        
+        // Cross-browser compatibility enhancements
+        if (!Element.prototype.scrollIntoView) {
+            Element.prototype.scrollIntoView = function() {
+                let rect = this.getBoundingClientRect();
+                window.scrollTo(0, rect.top + window.pageYOffset - 100);
+            };
+        }
+    </script>
+</body>
+</html>

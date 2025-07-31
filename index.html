@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
     <title>Fusion OZ Nepal - Australian Migration & Education Experts</title>
     <meta name="description" content="Expert Australian migration & education consultants. Visa assistance, study programs, and investment opportunities.">
-    <!-- OpenGraph Tags -->
     <meta property="og:title" content="Fusion OZ - Australian Migration Experts">
     <meta property="og:image" content="images/og-image.jpg">
     <meta property="og:description" content="Get expert help on Australian migration, student visas, and investment options.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fusionoz.com">
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <style>
@@ -49,7 +45,6 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
         header {
             background: linear-gradient(135deg, var(--primary), var(--dark));
             color: white;
@@ -138,7 +133,6 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
         
-        /* Hero Section with Slideshow */
         .hero {
             position: relative;
             height: 100vh;
@@ -239,7 +233,6 @@
             transform: scale(1.3);
         }
         
-        /* About Section */
         .about {
             padding: 100px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -319,7 +312,6 @@
             transform: scale(1.05);
         }
         
-        /* Services Section */
         .services {
             padding: 100px 0;
             background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
@@ -392,7 +384,6 @@
             line-height: 1.7;
         }
         
-        /* Team Section */
         .team {
             padding: 100px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -452,7 +443,6 @@
             font-size: 1.1rem;
         }
         
-        /* Detailed Form Section */
         .detailed-form {
             padding: 100px 0;
             background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
@@ -571,7 +561,6 @@
             box-shadow: 0 8px 20px rgba(252, 163, 17, 0.4);
         }
         
-        /* Contact Section */
         .contact {
             padding: 100px 0;
             background: white;
@@ -664,7 +653,6 @@
             transform: translateY(-5px) scale(1.1);
         }
         
-        /* Form Styles */
         .consultation-form {
             background: white;
             padding: 50px 40px;
@@ -717,7 +705,6 @@
             resize: vertical;
         }
         
-        /* Form Message */
         .form-message {
             padding: 20px;
             margin: 25px 0;
@@ -741,7 +728,6 @@
             display: block;
         }
         
-        /* Footer */
         footer {
             background: linear-gradient(135deg, #0c1e3e 0%, #142a50 100%);
             color: white;
@@ -822,7 +808,6 @@
             background: #ddd;
         }
         
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -850,7 +835,6 @@
             }
         }
         
-        /* New styles for spouse fields */
         #spouseFields {
             display: none;
             margin-top: 20px;
@@ -874,7 +858,6 @@
             border-bottom: 1px solid #ddd;
         }
         
-        /* Privacy Policy Checkbox */
         .privacy-checkbox {
             margin-top: 20px;
             padding: 15px;
@@ -883,7 +866,15 @@
             border-left: 3px solid var(--accent);
         }
         
-        /* Responsive Design */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: white;
+            background: transparent;
+            border: none;
+        }
+        
         @media (max-width: 1200px) {
             .hero h2 {
                 font-size: 3.5rem;
@@ -910,22 +901,45 @@
         
         @media (max-width: 768px) {
             .header-container {
-                flex-direction: column;
-                gap: 20px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            nav.active {
+                max-height: 500px;
             }
             
             nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 15px;
             }
             
             nav ul li {
-                margin: 10px 15px;
+                margin: 0;
+                text-align: center;
+            }
+            
+            .header-container .cta-button {
+                margin-top: 15px;
+                width: 100%;
+                text-align: center;
+                display: block;
             }
             
             .hero {
-                padding: 80px 0;
-                min-height: 600px;
+                min-height: 500px;
             }
             
             .hero-content {
@@ -938,6 +952,7 @@
             
             .hero p {
                 font-size: 1.2rem;
+                padding: 0 15px;
             }
             
             .section-title {
@@ -955,11 +970,48 @@
             .form-body {
                 padding: 20px;
             }
+            
+            .form-header {
+                padding: 20px;
+            }
+            
+            .form-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .consultation-form, 
+            .contact-info {
+                padding: 30px;
+            }
+            
+            .about {
+                padding: 60px 0;
+            }
+            
+            .services {
+                padding: 60px 0;
+            }
+            
+            .team {
+                padding: 60px 0;
+            }
+            
+            .detailed-form {
+                padding: 60px 0;
+            }
+            
+            .contact {
+                padding: 60px 0;
+            }
         }
         
         @media (max-width: 576px) {
             .hero h2 {
                 font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .section-title {
@@ -976,28 +1028,77 @@
             
             .form-group {
                 flex: 1 0 100%;
-            padding: 0 10px;
-            margin-bottom: 15px;
-            }
-            
-            .form-header {
-                padding: 20px;
+                padding: 0 10px;
+                margin-bottom: 15px;
             }
             
             .form-header h2 {
                 font-size: 1.8rem;
             }
+            
+            .hero .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .hero-content {
+                padding: 100px 20px 0;
+            }
+            
+            .slide-indicators {
+                bottom: 20px;
+            }
+            
+            .indicator {
+                width: 12px;
+                height: 12px;
+            }
+            
+            .about-text h3 {
+                font-size: 1.8rem;
+            }
+            
+            .about-text p {
+                font-size: 1rem;
+            }
+            
+            .highlight {
+                padding: 15px;
+            }
+            
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .service-card p {
+                font-size: 1rem;
+            }
+            
+            .member-photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .team-member h3 {
+                font-size: 1.3rem;
+            }
+            
+            .team-member .position {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <img src="images/logo.jpg" alt="Fusion OZ Logo">
             </div>
-            <nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -1010,7 +1111,6 @@
         </div>
     </header>
 
-    <!-- Hero Section with Slideshow -->
     <section class="hero">
         <div class="slideshow">
             <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')"></div>
@@ -1036,7 +1136,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Fusion OZ</h2>
@@ -1059,7 +1158,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
@@ -1091,7 +1189,6 @@
         </div>
     </section>
 
-    <!-- Team Section -->
     <section id="team" class="team">
         <div class="container">
             <h2 class="section-title">Our Kathmandu Team</h2>
@@ -1131,7 +1228,6 @@
         </div>
     </section>
 
-    <!-- Detailed Form Section -->
     <section id="detailed-form" class="detailed-form">
         <div class="container">
             <h2 class="section-title">Client Information Form</h2>
@@ -1141,11 +1237,9 @@
                     <p>Migration & Education Experts</p>
                 </div>
                 <form id="clientForm" action="https://formsubmit.co/info.np@fusionoz.com" method="POST" class="form-body">
-                    <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://fusionoz.com/thank-you.html">
                     <input type="hidden" name="_subject" value="New Client Form Submission - Fusion OZ">
-                    <!-- Honeypot Spam Protection -->
                     <input type="text" name="_honey" style="display:none">
                     
                     <div class="form-section">
@@ -1185,7 +1279,6 @@
                             </div>
                         </div>
                         
-                        <!-- Spouse fields container -->
                         <div id="spouseFields">
                             <h4 class="spouse-section-title">Spouse Information</h4>
                             <div class="form-row">
@@ -1359,7 +1452,6 @@
                             </div>
                         </div>
                         
-                        <!-- Privacy Policy Checkbox -->
                         <div class="privacy-checkbox">
                             <div class="checkbox-group">
                                 <input type="checkbox" id="privacyPolicy" name="Privacy Policy" required>
@@ -1376,7 +1468,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
@@ -1427,7 +1518,6 @@
                     </div>
                 </div>
                 
-                <!-- Consultation Form -->
                 <div id="consultation" class="consultation-form">
                     <h3>Book Your Free Consultation</h3>
                     <p>Fill out the form and our expert will contact you within 24 hours</p>
@@ -1435,11 +1525,9 @@
                     <div id="form-message" class="form-message"></div>
                     
                     <form id="consultationForm" action="https://formsubmit.co/info.np@fusionoz.com" method="POST">
-                        <!-- FormSubmit Configuration -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://fusionoz.com/thank-you.html">
                         <input type="hidden" name="_subject" value="New Consultation Request - Fusion OZ">
-                        <!-- Honeypot Spam Protection -->
                         <input type="text" name="_honey" style="display:none">
                         
                         <div class="form-group">
@@ -1473,7 +1561,6 @@
                             <textarea id="message" name="Message" class="form-control" placeholder="Tell us about your goals and questions..."></textarea>
                         </div>
                         
-                        <!-- Privacy Policy Checkbox -->
                         <div class="privacy-checkbox">
                             <div class="checkbox-group">
                                 <input type="checkbox" id="privacyPolicyConsult" name="Privacy Policy" required>
@@ -1488,7 +1575,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1540,7 +1626,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1554,7 +1639,6 @@
             });
         });
 
-        // Slideshow functionality
         const slides = document.querySelectorAll('.slide');
         const indicators = document.querySelectorAll('.indicator');
         let currentSlide = 0;
@@ -1574,15 +1658,12 @@
             showSlide(next);
         }
         
-        // Set up slide indicators
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => showSlide(index));
         });
         
-        // Auto-advance slides
         setInterval(nextSlide, 5000);
         
-        // Toggle test results visibility
         const englishTest = document.getElementById('englishTest');
         const testResults = document.getElementById('testResults');
         
@@ -1594,7 +1675,6 @@
             }
         });
         
-        // Toggle spouse fields visibility
         const maritalStatus = document.getElementById('maritalStatus');
         const spouseFields = document.getElementById('spouseFields');
         
@@ -1606,7 +1686,21 @@
             }
         });
         
-        // Cross-browser compatibility enhancements
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
         if (!Element.prototype.scrollIntoView) {
             Element.prototype.scrollIntoView = function() {
                 let rect = this.getBoundingClientRect();
